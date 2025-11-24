@@ -400,25 +400,29 @@ const Home = () => {
         </div>
       </section>
 
-      {/* AWARDS SECTION */}
-      <section className="py-20 bg-gray-50">
+      {/* AWARDS & RECOGNITION TIMELINE */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Trophy className="mx-auto mb-4 text-amber-400" size={64} />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
-            <p className="text-xl text-gray-600">Celebrating excellence and achievements</p>
+          <div className="text-center mb-16">
+            <div className="relative inline-block mb-6">
+              <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full blur opacity-30"></div>
+              <Trophy className="relative mx-auto text-amber-500" size={80} />
+            </div>
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
+            <p className="text-2xl text-amber-600 font-medium">Celebrating 26 Years of Creative Excellence</p>
+            <div className="w-40 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mt-6 rounded-full"></div>
           </div>
 
-          {/* Year Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {/* Enhanced Year Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {years.map((year) => (
               <button
                 key={year}
                 onClick={() => setSelectedYear(year)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                   selectedYear === year
-                    ? 'bg-amber-500 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-amber-50 border border-amber-200 shadow-md'
                 }`}
               >
                 {year === 'all' ? 'All Years' : year}
@@ -426,38 +430,86 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredAwards.slice(0, 6).map((award, index) => (
-              <div
-                key={`award-${index}`}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="bg-amber-100 p-3 rounded-full mr-4">
-                    <Trophy className="text-amber-600" size={24} />
+          {/* Awards Timeline */}
+          <div className="relative">
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-400 via-orange-500 to-amber-400 rounded-full"></div>
+
+            {/* Awards Timeline Items */}
+            <div className="space-y-20">
+              {filteredAwards.slice(0, 6).map((award, index) => (
+                <div
+                  key={`award-${index}`}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? 'justify-start' : 'justify-end'
+                  }`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full border-4 border-white shadow-xl z-10 flex items-center justify-center">
+                    <Trophy className="text-white" size={16} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">{award.title}</h3>
-                    <p className="text-amber-600 font-medium">{award.organization}</p>
+
+                  {/* Award Card */}
+                  <div
+                    className={`w-full lg:w-5/12 ${
+                      index % 2 === 0 ? 'lg:pr-12 lg:text-right' : 'lg:pl-12 lg:text-left'
+                    }`}
+                  >
+                    <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-amber-100">
+                      {/* Award Image */}
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={award.image}
+                          alt={award.title}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <span className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                            {award.year}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Award Content */}
+                      <div className="p-6">
+                        <div className="mb-4">
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{award.title}</h3>
+                          <p className="text-amber-600 font-semibold text-lg">{award.organization}</p>
+                        </div>
+                        
+                        <p className="text-gray-700 leading-relaxed mb-4">{award.description}</p>
+                        
+                        {/* Award Meta */}
+                        <div className={`flex items-center gap-2 ${
+                          index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'
+                        }`}>
+                          <CalendarIcon className="text-amber-500" size={16} />
+                          <span className="text-gray-600 font-medium">{award.year}</span>
+                        </div>
+                      </div>
+
+                      {/* Decorative Corner */}
+                      <div className={`absolute top-0 ${
+                        index % 2 === 0 ? 'right-0' : 'left-0'
+                      } w-0 h-0 border-t-[20px] border-t-transparent border-b-[20px] border-b-transparent ${
+                        index % 2 === 0 ? 'border-l-[20px] border-l-amber-500' : 'border-r-[20px] border-r-amber-500'
+                      }`}></div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center text-gray-600 mb-3">
-                  <CalendarIcon className="mr-2" size={16} />
-                  <span>{award.year}</span>
-                </div>
-                <p className="text-gray-700 leading-relaxed">{award.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <div className="text-center mt-12">
+          {/* Call to Action */}
+          <div className="text-center mt-20">
             <Link
               to="/awards"
-              className="inline-flex items-center px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-200 transform hover:scale-105"
+              className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-full hover:from-amber-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
-              View All Awards
-              <ArrowRight className="ml-2" size={20} />
+              View Complete Awards Collection
+              <ArrowRight className="ml-3" size={24} />
             </Link>
           </div>
         </div>
