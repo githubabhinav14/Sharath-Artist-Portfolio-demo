@@ -1,10 +1,10 @@
 // Mock data for Artist Portfolio
 
 export const artistInfo = {
-  name: "Alexandra Bennett",
+  name: "Sharath Nallanagula",
   tagline: "Contemporary Fine Artist & Portrait Specialist",
   shortBio: "Award-winning artist specializing in contemporary portraits, abstract paintings, and mixed media art. Featured in major galleries across the country.",
-  fullBio: "Alexandra Bennett is a contemporary fine artist whose work explores the intersection of emotion and color through portraiture and abstract expressionism. With over 15 years of professional experience, her distinctive style has been featured in galleries nationwide and collected by art enthusiasts worldwide. Her work is characterized by bold brushstrokes, vibrant color palettes, and an uncanny ability to capture the essence of her subjects.",
+  fullBio: "Sharath Nallanagula is a contemporary fine artist whose work explores the intersection of emotion and color through portraiture and abstract expressionism. With over 15 years of professional experience, her distinctive style has been featured in galleries nationwide and collected by art enthusiasts worldwide. Her work is characterized by bold brushstrokes, vibrant color palettes, and an uncanny ability to capture the essence of her subjects.",
   artistStatement: "My art is a journey through human emotion, translated into visual language. Each piece tells a story—sometimes loud and bold, sometimes whispered in subtle hues. I believe that art should evoke feeling, spark conversation, and challenge perspectives. Through my work, I aim to create connections between the viewer and the canvas, bridging the gap between the tangible and the emotional.",
   email: "alexandra@artistportfolio.com",
   phone: "+1 (555) 123-4567",
@@ -93,7 +93,7 @@ export const mediaFeatures = [
     title: "Local Artist Makes National Headlines",
     publication: "The Art Times",
     date: "March 2024",
-    excerpt: "Alexandra Bennett's latest exhibition 'Reflections' has captured the attention of critics and collectors nationwide...",
+    excerpt: "Sharath Nallanagula's latest exhibition 'Reflections' has captured the attention of critics and collectors nationwide...",
     image: "https://images.unsplash.com/photo-1623039405147-547794f92e9e",
     type: "article"
   },
@@ -118,7 +118,7 @@ export const mediaFeatures = [
     publication: "Art TV Network",
     date: "September 2023",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    excerpt: "An intimate look at Alexandra Bennett's creative journey and artistic philosophy.",
+    excerpt: "An intimate look at Sharath Nallanagula's creative journey and artistic philosophy.",
     image: "https://images.pexels.com/photos/3944377/pexels-photo-3944377.jpeg",
     type: "video"
   },

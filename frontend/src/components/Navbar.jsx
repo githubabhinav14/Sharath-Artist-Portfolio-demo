@@ -37,7 +37,7 @@ const Navbar = () => {
             to="/"
             className="text-xl lg:text-2xl font-bold text-white hover:text-amber-400 transition-colors duration-200"
           >
-            Alexandra Bennett
+            Sharath Nallanagula
           </Link>
 
           {/* Desktop Navigation */}
