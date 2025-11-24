@@ -201,6 +201,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Exhibition Calendar Section */}
+      <ExhibitionCalendar />
     </div>
   );
 };
