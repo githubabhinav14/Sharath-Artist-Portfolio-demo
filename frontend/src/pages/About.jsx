@@ -1,6 +1,6 @@
 import React from 'react';
 import { artistInfo, timeline } from '../data/mockData';
-import { Calendar, MapPin, Award } from 'lucide-react';
+import { Calendar, MapPin, Award, Palette } from 'lucide-react';
 
 const About = () => {
   return (
