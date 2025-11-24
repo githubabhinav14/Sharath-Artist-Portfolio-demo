@@ -114,6 +114,93 @@ const About = () => {
         </div>
       </section>
 
+      {/* Services & Process Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
+            <p className="text-xl text-gray-600">Professional art services tailored to your needs</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-gradient-to-br from-amber-50 to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Palette className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Portraits</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Personalized portrait commissions capturing the essence and personality of your subject with meticulous attention to detail.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Oil & Acrylic Paintings
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Various Sizes Available
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  4-8 Week Timeline
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-gradient-to-br from-amber-50 to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Award className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Original Artwork</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Unique, one-of-a-kind pieces from my personal collection available for purchase and private collections.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Certificate of Authenticity
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Curated Collections
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  International Shipping
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-gradient-to-br from-amber-50 to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <MapPin className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Art Consultation</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Expert guidance for collectors and interior designers seeking to curate meaningful art collections.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Collection Curation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Investment Advice
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                  Virtual Sessions
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Studio Images */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
