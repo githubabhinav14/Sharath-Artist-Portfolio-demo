@@ -229,16 +229,87 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map or Additional CTA Section */}
+      {/* Newsletter Section */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Image Side */}
+              <div className="relative h-64 md:h-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1613746011089-6a89f373d232"
+                  alt="Newsletter"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/80 to-black/60"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white p-8">
+                  <div className="text-center">
+                    <Mail size={48} className="mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold">Stay Connected</h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Form Side */}
+              <div className="p-8 lg:p-12">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Join the Newsletter</h3>
+                <p className="text-gray-600 mb-6">
+                  Get updates on new artworks, upcoming exhibitions, and exclusive behind-the-scenes content.
+                </p>
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full px-8 py-4 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    Subscribe Now
+                  </button>
+                </form>
+                <p className="text-xs text-gray-500 mt-4 text-center">
+                  No spam. Unsubscribe anytime. Your privacy is protected.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Press Kit & Commission Section */}
       <section className="py-20 bg-gray-900 text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Interested in a Commission?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            I'm currently accepting commissions for custom portraits and artwork. Let's discuss your vision and bring it to life.
-          </p>
-          <button className="inline-flex items-center px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-400 transition-all duration-200 transform hover:scale-105 shadow-lg">
-            Request a Commission
-          </button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Commission CTA */}
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold mb-6">Interested in a Commission?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                I'm currently accepting commissions for custom portraits and artwork. Let's discuss your vision and bring it to life.
+              </p>
+              <button className="inline-flex items-center px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-400 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                Request a Commission
+              </button>
+            </div>
+
+            {/* Press Kit Download */}
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold mb-6">Press & Media Kit</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Download high-resolution images, biography, and press materials for editorial use.
+              </p>
+              <button className="inline-flex items-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                <Newspaper className="mr-2" size={20} />
+                Download Press Kit
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
