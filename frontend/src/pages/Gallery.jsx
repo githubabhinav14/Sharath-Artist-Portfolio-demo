@@ -37,18 +37,28 @@ const Gallery = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center bg-black">
+      {/* Hero Section with Parallax Effect */}
+      <section className="relative h-96 flex items-center justify-center bg-black overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1740598307395-3ccc0ec28a28"
             alt="Gallery"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-40 transform scale-110"
+            style={{ transform: 'translateY(0px)' }}
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Art Gallery</h1>
-          <p className="text-xl text-amber-400">Explore the complete collection</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Art Gallery</h1>
+          <p className="text-xl text-amber-400 mb-6">Explore the complete collection</p>
+          <div className="flex justify-center space-x-4 text-sm">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="font-bold text-amber-400">{artworks.length}</span> Total Works
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="font-bold text-amber-400">{galleryCategories.length}</span> Categories
+            </div>
+          </div>
         </div>
       </section>
 
